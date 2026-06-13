@@ -287,8 +287,8 @@ def draw_ellipses(rho, sigma1, sigma2, mu1, mu2):
     setup_axes(
         ax3,
         title="図3：x_i = sigma_i y_i + mu_i による変換後の楕円",
-        xlabel="x1",
-        ylabel="x2"
+        xlabel="x2",
+        ylabel="x1"
     )
 
     all_x1 = np.array(all_x1)
