@@ -1,7 +1,8 @@
 import glob
 import numpy as np
-import matplotlib.pyplot as plt
 import matplotlib as mpl
+mpl.use("Agg")
+import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 import streamlit as st
 
@@ -150,7 +151,7 @@ def draw_ellipses(rho, sigma1, sigma2, mu1, mu2):
         [axis1_neg[1], axis1_pos[1]],
         linestyle="--",
         linewidth=2,
-        label=r"$y_1'$ 軸の像"
+        label="y1-prime 軸の像"
     )
 
     ax1.plot(
@@ -158,7 +159,7 @@ def draw_ellipses(rho, sigma1, sigma2, mu1, mu2):
         [axis2_neg[1], axis2_pos[1]],
         linestyle="--",
         linewidth=2,
-        label=r"$y_2'$ 軸の像"
+        label="y2-prime 軸の像"
     )
 
     L = 3.5
@@ -167,7 +168,7 @@ def draw_ellipses(rho, sigma1, sigma2, mu1, mu2):
         [-L, L],
         linestyle=":",
         linewidth=1.5,
-        label=r"$45^\circ$ 方向"
+        label="45度方向"
     )
 
     ax1.plot(
@@ -175,14 +176,14 @@ def draw_ellipses(rho, sigma1, sigma2, mu1, mu2):
         [L, -L],
         linestyle=":",
         linewidth=1.5,
-        label=r"$135^\circ$ 方向"
+        label="135度方向"
     )
 
     setup_axes(
         ax1,
         title=r"図1：直交変換前の楕円",
-        xlabel=r"$y_1$",
-        ylabel=r"$y_2$"
+        xlabel="y1",
+        ylabel="y2"
     )
 
     lim1 = np.sqrt(c_ref * (1 + abs(rho))) * 1.8
@@ -204,7 +205,7 @@ def draw_ellipses(rho, sigma1, sigma2, mu1, mu2):
         [0, 0],
         linestyle="--",
         linewidth=2,
-        label=r"$y_1'$ 軸"
+        label="y1-prime 軸"
     )
 
     ax2.plot(
@@ -212,14 +213,14 @@ def draw_ellipses(rho, sigma1, sigma2, mu1, mu2):
         [-b_ref, b_ref],
         linestyle="--",
         linewidth=2,
-        label=r"$y_2'$ 軸"
+        label="y2-prime 軸"
     )
 
     setup_axes(
         ax2,
         title=r"図2：直交変換後の楕円",
-        xlabel=r"$y_1'$",
-        ylabel=r"$y_2'$"
+        xlabel="y1-prime",
+        ylabel="y2-prime"
     )
 
     lim2 = np.sqrt(c_ref * (1 + abs(rho))) * 1.6
@@ -242,12 +243,12 @@ def draw_ellipses(rho, sigma1, sigma2, mu1, mu2):
         all_x1.extend(X[0])
         all_x2.extend(X[1])
 
-    ax3.scatter(mu1, mu2, s=70, label=r"中心 $\mu$")
+    ax3.scatter(mu1, mu2, s=70, label="中心 mu")
 
     ax3.text(
         mu1 + 0.15,
         mu2 + 0.15,
-        r"$\mu=(\mu_1,\mu_2)$",
+        "mu = (mu1, mu2)",
         fontsize=11
     )
 
@@ -272,22 +273,22 @@ def draw_ellipses(rho, sigma1, sigma2, mu1, mu2):
     ax3.text(
         mu1 + sigma1 + 0.1,
         mu2,
-        r"$\sigma_1$ 方向",
+        "sigma1 方向",
         fontsize=10
     )
 
     ax3.text(
         mu1,
         mu2 + sigma2 + 0.1,
-        r"$\sigma_2$ 方向",
+        "sigma2 方向",
         fontsize=10
     )
 
     setup_axes(
         ax3,
-        title=r"図3：$x_i=\sigma_i y_i+\mu_i$ による変換後の楕円",
-        xlabel=r"$x_1$",
-        ylabel=r"$x_2$"
+        title="図3：x_i = sigma_i y_i + mu_i による変換後の楕円",
+        xlabel="x1",
+        ylabel="x2"
     )
 
     all_x1 = np.array(all_x1)
@@ -299,8 +300,8 @@ def draw_ellipses(rho, sigma1, sigma2, mu1, mu2):
     ax3.legend(fontsize=9)
 
     fig.suptitle(
-        rf"$\rho={rho:.2f},\ \sigma_1={sigma1:.2f},\ \sigma_2={sigma2:.2f},\ "
-        rf"\mu_1={mu1:.2f},\ \mu_2={mu2:.2f}$",
+        f"rho={rho:.2f}, sigma1={sigma1:.2f}, sigma2={sigma2:.2f}, "
+        f"mu1={mu1:.2f}, mu2={mu2:.2f}",
         fontsize=16
     )
 
