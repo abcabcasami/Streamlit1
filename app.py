@@ -271,15 +271,15 @@ def draw_ellipses(rho, sigma1, sigma2, mu1, mu2):
     )
 
     ax3.text(
-        mu1 + sigma1 + 0.1,
-        mu2,
+        mu1,
+        mu2+ sigma1 + 0.1,
         "sigma1 方向",
         fontsize=10
     )
 
     ax3.text(
-        mu1,
-        mu2 + sigma2 + 0.1,
+        mu1+ sigma2 + 0.1,
+        mu2,
         "sigma2 方向",
         fontsize=10
     )
