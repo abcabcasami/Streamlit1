@@ -255,8 +255,8 @@ def draw_ellipses(rho, sigma1, sigma2, mu1, mu2):
     ax3.arrow(
         mu1,
         mu2,
-        sigma1,
         0,
+        sigma1,
         head_width=0.12,
         length_includes_head=True
     )
@@ -264,8 +264,8 @@ def draw_ellipses(rho, sigma1, sigma2, mu1, mu2):
     ax3.arrow(
         mu1,
         mu2,
-        0,
         sigma2,
+        0,
         head_width=0.12,
         length_includes_head=True
     )
@@ -287,8 +287,8 @@ def draw_ellipses(rho, sigma1, sigma2, mu1, mu2):
     setup_axes(
         ax3,
         title="図3：x_i = sigma_i y_i + mu_i による変換後の楕円",
-        xlabel="x2",
-        ylabel="x1"
+        xlabel="x1",
+        ylabel="x2"
     )
 
     all_x1 = np.array(all_x1)
