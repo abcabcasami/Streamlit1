@@ -255,8 +255,8 @@ def draw_ellipses(rho, sigma1, sigma2, mu1, mu2):
     ax3.arrow(
         mu1,
         mu2,
-        0,
         sigma1,
+        0,
         head_width=0.12,
         length_includes_head=True
     )
@@ -264,8 +264,8 @@ def draw_ellipses(rho, sigma1, sigma2, mu1, mu2):
     ax3.arrow(
         mu1,
         mu2,
-        sigma2,
         0,
+        sigma2,
         head_width=0.12,
         length_includes_head=True
     )
