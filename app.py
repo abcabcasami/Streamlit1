@@ -239,9 +239,9 @@ def draw_ellipses(rho, sigma1, sigma2, mu1, mu2):
         Y = yprime_to_y(Yp, P)
         X = y_to_x(Y, sigma1, sigma2, mu1, mu2)
 
-        ax3.plot(X[0], X[1], label=f"c = {c}")
-        all_x1.extend(X[0])
-        all_x2.extend(X[1])
+        ax3.plot(X[1], X[0], label=f"c = {c}")
+        all_x1.extend(X[1])
+        all_x2.extend(X[0])
 
     ax3.scatter(mu1, mu2, s=70, label="中心 mu")
 
