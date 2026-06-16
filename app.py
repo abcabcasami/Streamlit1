@@ -243,7 +243,7 @@ def draw_ellipses(rho, sigma1, sigma2, mu1, mu2):
         all_x1.extend(X[1])
         all_x2.extend(X[0])
 
-    ax3.scatter(mu1, mu2, s=70, label="中心 mu")
+    ax3.scatter(mu2, mu1, s=70, label="中心 mu")
 
     ax3.text(
         mu1 + 0.15,
