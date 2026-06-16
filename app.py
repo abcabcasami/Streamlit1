@@ -246,8 +246,8 @@ def draw_ellipses(rho, sigma1, sigma2, mu1, mu2):
     ax3.scatter(mu2, mu1, s=70, label="中心 mu")
 
     ax3.text(
-        mu1 + 0.15,
         mu2 + 0.15,
+        mu1 + 0.15,
         "mu = (mu1, mu2)",
         fontsize=11
     )
@@ -262,8 +262,8 @@ def draw_ellipses(rho, sigma1, sigma2, mu1, mu2):
     )
 
     ax3.arrow(
-        mu1,
         mu2,
+        mu1,
         sigma2,
         0,
         head_width=0.12,
@@ -271,15 +271,15 @@ def draw_ellipses(rho, sigma1, sigma2, mu1, mu2):
     )
 
     ax3.text(
-        mu1,
-        mu2+ sigma1 + 0.1,
+        mu2,
+        mu1+ sigma1 + 0.1,
         "sigma1 方向",
         fontsize=10
     )
 
     ax3.text(
-        mu1+ sigma2 + 0.1,
-        mu2,
+        mu2+ sigma2 + 0.1,
+        mu1,
         "sigma2 方向",
         fontsize=10
     )
